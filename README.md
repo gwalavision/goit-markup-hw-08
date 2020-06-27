@@ -1,2 +1,2 @@
 # goit-markup-hw-01
-homework #1
+https://gwalavision.github.io/goit-markup-hw-01/
