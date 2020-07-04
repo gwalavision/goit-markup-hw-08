@@ -1,0 +1,236 @@
+:root {
+  --primary-text-color: #212121;
+  --secondary-text-color: #757575;
+  --accent-color: #2196f3;
+  --main-white-color: #ffffff;
+  --secondary-background-color: #f5f4fa;
+  --footer-background-color: #2f303a;
+  --icons-main-color: #afb1b8;
+  --footer-icons-main-color: rgba (0, 0, 0, 0.1);
+}
+
+/* general properties */
+
+body {
+  background-color: var(--main-wthie-color);
+  color: var(--primary-text-color);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+}
+
+.link {
+  text-decoration: none;
+  font-style: normal;
+}
+
+.list {
+  list-style: none;
+}
+
+/* header */
+
+.header {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+/* logo (header & footer) */
+.logo {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+}
+
+.header-nav .logo {
+}
+
+.footer .logo {
+}
+
+.web-word {
+  color: var(--accent-color);
+}
+
+.studio-word-header {
+  color: var(--primary-text-color);
+}
+
+.studio-word-footer {
+  color: var(--main-white-color);
+}
+
+.nav-linklist-item .link {
+  color: inherit;
+}
+
+.getintouch-header .link {
+  color: var(--secondary-text-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+}
+
+.web-word,
+.nav-linklist-item .link:hover,
+.nav-linklist-item .link:focus,
+.getintouch-header .link:hover,
+.getintouch-header .link:focus {
+  color: var(--accent-color);
+}
+
+/* main */
+/* hero */
+
+.hero-header {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.secondary-header {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+
+.hero .btn {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--main-white-color);
+  background: var(--accent-color);
+}
+
+/* advantages */
+
+.advantage-header {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.advantage-text {
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--secondary-text-color);
+}
+
+/* what we do  */
+
+.specialty-header {
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--main-white-color);
+  background-color: var(--primary-text-color);
+}
+
+/* workers  */
+
+.worker-header {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+}
+
+.worker-position {
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  color: var(--secondary-text-color);
+}
+
+.footer {
+  background-color: var(--footer-background-color);
+}
+
+/* loyal customers */
+
+/* contacts */
+
+.getintouch-address .link {
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--main-white-color);
+}
+
+.getintouch-mail .link,
+.getintouch-phone .link {
+  font-size: 14px;
+  line-height: 1.71px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.getintouch .link:hover,
+.getintouch .link:focus {
+  color: var(--accent-color);
+}
+.socialize-text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--main-white-color);
+}
+
+/* PORTFOLIO PAGE  */
+
+/* filter buttons section  */
+.filter-section-btn {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  background: var(--secondary-background-color);
+}
+
+.filter-section-btn:hover,
+.filter-section-btn:focus {
+  color: var(--main-white-color);
+  background: var(--accent-color);
+}
+
+.filter-section-btn:active {
+  background: #0a4e72;
+}
+
+/* projects  */
+
+.projects-header {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--primary-text-color);
+}
+
+.projects-type {
+  font-size: 16px;
+  line-height: 1.87;
+  color: #757575;
+}
+
+.projects-description {
+  font-size: 18px;
+  line-height: 1.56;
+  color: var(--main-white-color);
+  background-color: var(--accent-color);
+}

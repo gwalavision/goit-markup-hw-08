@@ -4,13 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title lang="en">Web Studio</title>
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/normalize.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -18,11 +15,11 @@
     <!--site header-->
     <header class="header">
       <nav class="header-nav">
-        <a class="logo" href="/" lang="en"
+        <a class="logo link" href="/" lang="en"
           ><span class="web-word">Web</span>
-          <span class="studio-word">Studio</span></a
+          <span class="studio-word-header">Studio</span></a
         >
-        <ul class="header-nav-linklist">
+        <ul class="header-nav-linklist list">
           <li class="nav-linklist-item"><a class="link" href="">Студия</a></li>
           <li class="nav-linklist-item">
             <a class="link" href="./portfolio.html">Портфолио</a>
@@ -32,45 +29,51 @@
           </li>
         </ul>
       </nav>
-      <address class="header-connect">
-        <a class="link" href="mailto:info@devstudio.com">info@devstudio.com</a>
-        <a class="link" href="tel:+380961111111">+38 096 111 11 11</a>
-      </address>
+      <div class="getintouch-header">
+        <address class="getintouch-header-mail">
+          <a class="link" href="mailto:info@devstudio.com"
+            >info@devstudio.com</a
+          >
+        </address>
+        <address class="getintouch-header-phone">
+          <a class="link" href="tel:+380961111111">+38 096 111 11 11</a>
+        </address>
+      </div>
     </header>
     <main>
       <!--HERO-->
       <section class="hero">
         <h1 class="hero-header">Эффективные решения для вашего бизнеса</h1>
-        <button>Заказать услугу</button>
+        <button class="btn" type="button">Заказать услугу</button>
       </section>
       <!--our advantages-->
       <section>
         <h2 hidden>Наши преимущества</h2>
-        <ul>
+        <ul class="list">
           <li>
-            <h3>Внимание к деталям</h3>
-            <p>
+            <h3 class="advantage-header">Внимание к деталям</h3>
+            <p class="advantage-text">
               Идейные соображения, а также начало повседневной работы по
               формированию позиции.
             </p>
           </li>
           <li>
-            <h3>Пунктуальность</h3>
-            <p>
+            <h3 class="advantage-header">Пунктуальность</h3>
+            <p class="advantage-text">
               Задача организации, в особенности же рамки и место обучения кадров
               влечет за собой.
             </p>
           </li>
           <li>
-            <h3>Планирование</h3>
-            <p>
+            <h3 class="advantage-header">Планирование</h3>
+            <p class="advantage-text">
               Равным образом консультация с широким активом в значительной
               степени обуславливает.
             </p>
           </li>
           <li>
-            <h3>Современные технологии</h3>
-            <p>
+            <h3 class="advantage-header">Современные технологии</h3>
+            <p class="advantage-text">
               Значимость этих проблем настолько очевидна, что реализация
               плановых заданий.
             </p>
@@ -79,8 +82,8 @@
       </section>
       <!--what we do-->
       <section>
-        <h2>Чем мы занимаемся</h2>
-        <ul>
+        <h2 class="secondary-header">Чем мы занимаемся</h2>
+        <ul class="list">
           <li>
             <img
               src="./images/desktop_apps.jpg"
@@ -88,7 +91,7 @@
               width="370"
               height="294"
             />
-            <h3>Десктопные приложения</h3>
+            <h3 class="specialty-header">Десктопные приложения</h3>
           </li>
           <li>
             <img
@@ -97,7 +100,7 @@
               width="370"
               height="294"
             />
-            <h3>Мобильные приложения</h3>
+            <h3 class="specialty-header">Мобильные приложения</h3>
           </li>
           <li>
             <img
@@ -106,15 +109,15 @@
               width="370"
               height="294"
             />
-            <h3>Дизайнерские решения</h3>
+            <h3 class="specialty-header">Дизайнерские решения</h3>
           </li>
         </ul>
       </section>
       <!--our team-->
       <section>
-        <h2>Наша команда</h2>
+        <h2 class="secondary-header">Наша команда</h2>
         <!--worker #1-->
-        <ul>
+        <ul class="list">
           <li>
             <img
               src="./images/worker_1.jpg"
@@ -122,19 +125,24 @@
               width="270"
               height="260"
             />
-            <h3>Николай Кучеренко</h3>
-            <p>Product Designer</p>
-            <ul>
+            <h3 class="worker-header">Николай Кучеренко</h3>
+            <p class="worker-position">Product Designer</p>
+            <ul class="list">
               <li>
-                <a href="" aria-label="instagram link"></a>будет иконка
-                инстаграм
+                <a class="link" href="" aria-label="instagram link"></a>будет
+                иконка инстаграм
               </li>
               <li>
-                <a href="" aria-label="twitter link"></a>будет иконка твиттер
+                <a class="link" href="" aria-label="twitter link"></a>будет
+                иконка твиттер
               </li>
-              <li><a href="" aria-label="facebook link"></a>будет иконка ФБ</li>
               <li>
-                <a href="" aria-label="linkedin link"></a>будет иконка линкдина
+                <a class="link" href="" aria-label="facebook link"></a>будет
+                иконка ФБ
+              </li>
+              <li>
+                <a class="link" href="" aria-label="linkedin link"></a>будет
+                иконка линкдина
               </li>
             </ul>
           </li>
@@ -146,19 +154,24 @@
               width="270"
               height="260"
             />
-            <h3>Ольга Иванова</h3>
-            <p>Frontend Developer</p>
-            <ul>
+            <h3 class="worker-header">Ольга Иванова</h3>
+            <p class="worker-position">Frontend Developer</p>
+            <ul class="list">
               <li>
-                <a href="" aria-label="instagram link"></a>будет иконка
-                инстаграм
+                <a class="link" href="" aria-label="instagram link"></a>будет
+                иконка инстаграм
               </li>
               <li>
-                <a href="" aria-label="twitter link"></a>будет иконка твиттер
+                <a class="link" href="" aria-label="twitter link"></a>будет
+                иконка твиттер
               </li>
-              <li><a href="" aria-label="facebook link"></a>будет иконка ФБ</li>
               <li>
-                <a href="" aria-label="linkedin link"></a>будет иконка линкдина
+                <a class="link" href="" aria-label="facebook link"></a>будет
+                иконка ФБ
+              </li>
+              <li>
+                <a class="link" href="" aria-label="linkedin link"></a>будет
+                иконка линкдина
               </li>
             </ul>
           </li>
@@ -170,19 +183,24 @@
               width="270"
               height="260"
             />
-            <h3>Андрей Шевченко</h3>
-            <p>Marketing</p>
-            <ul>
+            <h3 class="worker-header">Андрей Шевченко</h3>
+            <p class="worker-position">Marketing</p>
+            <ul class="list">
               <li>
-                <a href="" aria-label="instagram link"></a>будет иконка
-                инстаграм
+                <a class="link" href="" aria-label="instagram link"></a>будет
+                иконка инстаграм
               </li>
               <li>
-                <a href="" aria-label="twitter link"></a>будет иконка твиттер
+                <a class="link" href="" aria-label="twitter link"></a>будет
+                иконка твиттер
               </li>
-              <li><a href="" aria-label="facebook link"></a>будет иконка ФБ</li>
               <li>
-                <a href="" aria-label="linkedin link"></a>будет иконка линкдина
+                <a class="link" href="" aria-label="facebook link"></a>будет
+                иконка ФБ
+              </li>
+              <li>
+                <a class="link" href="" aria-label="linkedin link"></a>будет
+                иконка линкдина
               </li>
             </ul>
           </li>
@@ -194,19 +212,24 @@
               width="270"
               height="260"
             />
-            <h3>Иван Николаев</h3>
-            <p>UI Designer</p>
-            <ul>
+            <h3 class="worker-header">Иван Николаев</h3>
+            <p class="worker-position">UI Designer</p>
+            <ul class="list">
               <li>
-                <a href="" aria-label="instagram link"></a>будет иконка
-                инстаграм
+                <a class="link" href="" aria-label="instagram link"></a>будет
+                иконка инстаграм
               </li>
               <li>
-                <a href="" aria-label="twitter link"></a>будет иконка твиттер
+                <a class="link" href="" aria-label="twitter link"></a>будет
+                иконка твиттер
               </li>
-              <li><a href="" aria-label="facebook link"></a>будет иконка ФБ</li>
               <li>
-                <a href="" aria-label="linkedin link"></a>будет иконка линкдина
+                <a class="link" href="" aria-label="facebook link"></a>будет
+                иконка ФБ
+              </li>
+              <li>
+                <a class="link" href="" aria-label="linkedin link"></a>будет
+                иконка линкдина
               </li>
             </ul>
           </li>
@@ -214,10 +237,10 @@
       </section>
       <!--loyal customers-->
       <section>
-        <h2>Постоянные клиенты</h2>
-        <ul>
+        <h2 class="secondary-header">Постоянные клиенты</h2>
+        <ul class="list">
           <li>
-            <a href=""></a
+            <a class="link" href=""></a
             ><img
               src="./images/logo_1.svg"
               alt="Лого компании 1"
@@ -226,7 +249,7 @@
             />
           </li>
           <li>
-            <a href=""></a
+            <a class="link" href=""></a
             ><img
               src="./images/logo_2.svg"
               alt="Лого компании 2"
@@ -235,7 +258,7 @@
             />
           </li>
           <li>
-            <a href=""></a
+            <a class="link" href=""></a
             ><img
               src="./images/logo_3.svg"
               alt="Лого компании 3"
@@ -244,7 +267,7 @@
             />
           </li>
           <li>
-            <a href=""></a
+            <a class="link" href=""></a
             ><img
               src="./images/logo_4.svg"
               alt="Лого компании 4"
@@ -253,7 +276,7 @@
             />
           </li>
           <li>
-            <a href=""></a
+            <a class="link" href=""></a
             ><img
               src="./images/logo_5.svg"
               alt="Лого компании 5"
@@ -262,7 +285,7 @@
             />
           </li>
           <li>
-            <a href=""></a
+            <a class="link" href=""></a
             ><img
               src="./images/logo_6.svg"
               alt="Лого компании 6"
@@ -273,29 +296,49 @@
         </ul>
       </section>
     </main>
-    <footer>
+    <footer class="footer">
       <!--contacts-->
-      <div>
-        <a href="/" lang="en"><span>Web</span> <span>Studio</span></a>
-        <address>
-          <a href="https://goo.gl/maps/uQs3DXEoR85Xu31o8"
+      <div class="footer-logo">
+        <a class="logo link" href="/" lang="en"
+          ><span class="web-word">Web</span>
+          <span class="studio-word-footer">Studio</span></a
+        >
+      </div>
+      <div class="getintouch">
+        <address class="getintouch-address">
+          <a class="link" href="https://goo.gl/maps/uQs3DXEoR85Xu31o8"
             >г. Киев, пр-т Леси Украинки, 26</a
           >
-          <a href="mailto:info@devstudio.com">info@devstudio.com</a>
-          <a href="tel:+380961111111">+38 096 111 11 11</a>
+        </address>
+        <address class="getintouch-mail">
+          <a class="link" href="mailto:info@devstudio.com"
+            >info@devstudio.com</a
+          >
+        </address>
+        <address class="getintouch-phone">
+          <a class="link" href="tel:+380961111111">+38 096 111 11 11</a>
         </address>
       </div>
+
       <!--join in!-->
-      <div>
-        <b>присоединяйтесь</b>
-        <ul>
+      <div class="socialize">
+        <b class="socialize-text">присоединяйтесь</b>
+        <ul class="list">
           <li>
-            <a href="" aria-label="instagram link"></a>будет иконка инстаграм
+            <a class="link" href="" aria-label="instagram link"></a>будет иконка
+            инстаграм
           </li>
-          <li><a href="" aria-label="twitter link"></a>будет иконка твиттер</li>
-          <li><a href="" aria-label="facebook link"></a>будет иконка ФБ</li>
           <li>
-            <a href="" aria-label="linkedin link"></a>будет иконка линкдина
+            <a class="link" href="" aria-label="twitter link"></a>будет иконка
+            твиттер
+          </li>
+          <li>
+            <a class="link" href="" aria-label="facebook link"></a>будет иконка
+            ФБ
+          </li>
+          <li>
+            <a class="link" href="" aria-label="linkedin link"></a>будет иконка
+            линкдина
           </li>
         </ul>
       </div>
