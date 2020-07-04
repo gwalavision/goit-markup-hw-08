@@ -234,3 +234,9 @@ body {
   color: var(--main-white-color);
   background-color: var(--accent-color);
 }
+
+.projects-header:hover,
+.projects-header:focus,
+.projects-type:hover,
+.projects-type:focus {
+  color: var(--accent-color);
