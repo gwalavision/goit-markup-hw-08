@@ -56,7 +56,7 @@ body {
 }
 
 .studio-word-header {
-  color: var(--primary-text-color);
+  color: #000000;
 }
 
 .studio-word-footer {
@@ -81,6 +81,10 @@ body {
 .getintouch-header .link:hover,
 .getintouch-header .link:focus {
   color: var(--accent-color);
+}
+
+.nav-linklist-item .link.current {
+  color: var(--accent-color)
 }
 
 /* main */
