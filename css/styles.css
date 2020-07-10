@@ -13,7 +13,6 @@
 body {
   margin-right: auto;
   margin-left: auto;
-
   background-color: var(--main-wthie-color);
   color: var(--primary-text-color);
   font-family: 'Roboto', sans-serif;
@@ -38,7 +37,8 @@ h4,
 h5,
 h6,
 a,
-ul {
+ul,
+p {
   margin: 0;
   padding: 0;
 }
@@ -144,8 +144,7 @@ ul {
 /* hero */
 
 .hero {
-  width: 1600px;
-  max-height: 600px;
+  width: 1200px;
   padding: 0px 15px;
   margin-right: auto;
   margin-left: auto;
@@ -156,12 +155,12 @@ ul {
 }
 
 .hero-container {
-  padding: 200px 452px;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .hero-header {
   margin-bottom: 30px;
-
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -194,12 +193,14 @@ ul {
   width: 1200px;
   margin-right: auto;
   margin-left: auto;
+  margin-bottom: 94px;
 
   border: 1px solid #000000;
 }
 
 .advantages-section .list {
   display: flex;
+  padding: 0px 15px;
 }
 
 .secondary-header {
@@ -208,8 +209,18 @@ ul {
   line-height: 1.17;
   text-align: center;
 }
+.advantage-items {
+  width: 270px;
+  margin-right: 30px;
+}
+
+.advantage-items:last-child {
+  margin-right: 0px;
+}
 
 .advantage-header {
+  margin-bottom: 10px;
+
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -237,13 +248,21 @@ ul {
   width: 1200px;
   margin-right: auto;
   margin-left: auto;
+  padding: 0px 15px;
 }
 
 .works-section .list {
   display: flex;
+  margin-top: 50px;
+}
+
+.works-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .worker-header {
+  margin-bottom: 50px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
