@@ -10,11 +10,10 @@
 }
 
 /* general properties */
-html {
-  box-sizing: border-box;
-}
-
 body {
+  margin-right: auto;
+  margin-left: auto;
+
   background-color: var(--main-wthie-color);
   color: var(--primary-text-color);
   font-family: 'Roboto', sans-serif;
@@ -49,6 +48,8 @@ ul {
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
 
   font-weight: 500;
   font-size: 14px;
@@ -60,8 +61,7 @@ ul {
 
 .header-nav-linklist {
   display: flex;
-  margin-left: 0px;
-  padding: 0px;
+
   align-items: center;
 }
 
@@ -95,7 +95,7 @@ ul {
 .studio-word-footer {
   color: var(--main-white-color);
 }
-.nav-linklist-item {
+.nav-linklist-item .link {
   padding: 32px 0px;
 }
 
@@ -144,16 +144,19 @@ ul {
 /* hero */
 
 .hero {
-  width: 1200px;
+  width: 1600px;
   max-height: 600px;
   padding: 0px 15px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 94px;
   text-align: center;
 
   border: 1px solid #000000;
 }
 
 .hero-container {
-  padding: 200px 0px;
+  padding: 200px 452px;
 }
 
 .hero-header {
@@ -187,6 +190,18 @@ ul {
 }
 
 /* advantages */
+.advantages-section {
+  width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+
+  border: 1px solid #000000;
+}
+
+.advantages-section .list {
+  display: flex;
+}
+
 .secondary-header {
   font-weight: 700;
   font-size: 36px;
@@ -218,6 +233,15 @@ ul {
 }
 
 /* workers  */
+.works-section {
+  width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.works-section .list {
+  display: flex;
+}
 
 .worker-header {
   font-weight: 500;
