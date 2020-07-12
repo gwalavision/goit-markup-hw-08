@@ -261,6 +261,7 @@ b {
 
 .team-section {
   margin-bottom: 64px;
+  padding-bottom: 124px;
 
   /* border: 1px solid #000000; */
   background-color: var(--secondary-background-color);
