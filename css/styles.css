@@ -11,8 +11,11 @@
 
 /* general properties */
 body {
+  max-width: 1200px;
   margin-right: auto;
   margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
   background-color: var(--main-wthie-color);
   color: var(--primary-text-color);
   font-family: 'Roboto', sans-serif;
@@ -38,25 +41,22 @@ h5,
 h6,
 a,
 ul,
-p {
+p,
+button,
+address,
+b {
   margin: 0;
   padding: 0;
 }
 /* header */
 
 .header {
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-right: auto;
-  margin-left: auto;
-
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
 
-  border: 1px #043454 solid;
+  /* border: 1px #043454 solid; */
 }
 
 .header-nav-linklist {
@@ -144,14 +144,10 @@ p {
 /* hero */
 
 .hero {
-  width: 1200px;
-  padding: 0px 15px;
-  margin-right: auto;
-  margin-left: auto;
   margin-bottom: 94px;
   text-align: center;
 
-  border: 1px solid #000000;
+  /* border: 1px solid #000000; */
 }
 
 .hero-container {
@@ -171,8 +167,10 @@ p {
 }
 
 .hero .btn {
+  display: inline-block;
   min-width: 200px;
-  height: 50px;
+  margin-right: auto;
+  margin-left: auto;
   padding: 10px 32px;
 
   font-family: inherit;
@@ -190,25 +188,15 @@ p {
 
 /* advantages */
 .advantages-section {
-  width: 1200px;
-  margin-right: auto;
-  margin-left: auto;
   margin-bottom: 94px;
 
-  border: 1px solid #000000;
+  /* border: 1px solid #000000; */
 }
 
 .advantages-section .list {
   display: flex;
-  padding: 0px 15px;
 }
 
-.secondary-header {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-}
 .advantage-items {
   width: 270px;
   margin-right: 30px;
@@ -236,6 +224,7 @@ p {
 /* what we do  */
 
 .specialty-header {
+  text-align: center;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
@@ -243,12 +232,20 @@ p {
   background-color: var(--primary-text-color);
 }
 
-/* workers  */
 .works-section {
-  width: 1200px;
-  margin-right: auto;
+  max-width: 1200px;
   margin-left: auto;
-  padding: 0px 15px;
+  margin-right: auto;
+  margin-bottom: 94px;
+  /* border: 1px solid #000000; */
+}
+
+.works-header {
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
 }
 
 .works-section .list {
@@ -260,8 +257,35 @@ p {
   margin-right: 30px;
 }
 
-.worker-header {
+/* team */
+
+.team-section {
+  margin-bottom: 64px;
+
+  /* border: 1px solid #000000; */
+  background-color: var(--secondary-background-color);
+}
+
+.team-header {
   margin-bottom: 50px;
+  padding-top: 94px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+
+.team-section .list {
+  display: flex;
+  justify-content: center;
+}
+
+.worker:not(:last-child) {
+  margin-right: 30px;
+}
+
+.worker-header {
+  margin-bottom: 10px;
 
   font-weight: 500;
   font-size: 16px;
@@ -269,39 +293,114 @@ p {
   text-align: center;
 }
 
+.worker-image {
+  margin-bottom: 30px;
+}
+
 .worker-position {
+  margin-bottom: 16px;
+
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
   color: var(--secondary-text-color);
 }
 
-.footer {
-  background-color: var(--footer-background-color);
+.list.worker-social {
+  padding: 0px 32px;
+  justify-content: center;
+}
+
+.worker-social .icons:not(:last-child) {
+  margin-right: 22px;
 }
 
 /* loyal customers */
 
-/* contacts */
-
-.getintouch-address .link {
-  font-size: 14px;
-  line-height: 1.71;
-  color: var(--main-white-color);
+.customers-section {
+  margin-bottom: 94px;
 }
 
-.getintouch-mail .link,
-.getintouch-phone .link {
+.customers-section > .list {
+  display: flex;
+}
+
+.customers-header {
+  margin-bottom: 50px;
+  padding-top: 94px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+
+.customers-icons {
+  margin-right: 30px;
+}
+
+.customers-icons:last-child {
+  margin-right: 0px;
+}
+
+/* FOOTER */
+
+.footer {
+  background-color: var(--footer-background-color);
+}
+
+.footer-container {
+  display: flex;
+}
+
+.contacts-container {
+  padding: 60px 0px;
+  margin-right: 64px;
+}
+
+.footer-logo {
+  margin-bottom: 20px;
+}
+
+.getintouch-address {
   font-size: 14px;
-  line-height: 1.71px;
+  line-height: 1.71;
   color: rgba(255, 255, 255, 0.6);
 }
 
-.getintouch .link:hover,
-.getintouch .link:focus {
+.getintouch-address .link {
+  margin-bottom: 9px;
+}
+
+.getintouch-address > .address {
+  color: var(--main-white-color);
+}
+
+.getintouch-address > .mail {
+  text-shadow: black 1px 1px 0, black -1px -1px 0, black -1px 1px 0,
+    black 1px -1px 0;
+  color: inherit;
+}
+
+.getintouch-address > .phone {
+  margin-bottom: 0;
+  color: inherit;
+}
+
+.getintouch-address .link:hover,
+.getintouch-address .link:focus {
   color: var(--accent-color);
 }
+
+.socialize-container {
+  padding-top: 72px;
+  padding-bottom: 100px;
+  margin-right: 94px;
+}
+
 .socialize-text {
+  display: block;
+  margin-bottom: 20px;
+
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -310,15 +409,56 @@ p {
   color: var(--main-white-color);
 }
 
+.socialize-container > .list {
+  display: flex;
+  color: var(--secondary-text-color);
+}
+
+.footer-social-item:not(:last-child) {
+  margin-right: 10px;
+}
+.subscribe-container {
+  padding-top: 72px;
+  padding-bottom: 94px;
+}
+.subscribe-container > .text {
+  display: block;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--main-white-color);
+}
+
 /* PORTFOLIO PAGE  */
 
 /* filter buttons section  */
+.filter-section {
+  margin-bottom: 50px;
+}
+
+.filter-section > .list {
+  display: flex;
+  justify-content: center;
+}
+
+.filter-section-item:not(:last-child) {
+  margin-right: 8px;
+}
+
 .filter-section-btn {
+  text-align: center;
+  padding: 6px 22px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
   text-align: center;
   background: var(--secondary-background-color);
+
+  border: none;
+  border-radius: 4px;
 }
 
 .filter-section-btn:hover,
@@ -332,6 +472,11 @@ p {
 }
 
 /* projects  */
+
+.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+}
 
 .projects-header {
   font-weight: bold;
@@ -348,6 +493,7 @@ p {
 }
 
 .projects-description {
+  display: none;
   font-size: 18px;
   line-height: 1.56;
   color: var(--main-white-color);
