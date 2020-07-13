@@ -11,16 +11,19 @@
 
 /* general properties */
 body {
-  max-width: 1200px;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 15px;
-  padding-left: 15px;
   background-color: var(--main-wthie-color);
   color: var(--primary-text-color);
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   letter-spacing: 0.03em;
+}
+
+.container {
+  width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 .link {
@@ -61,7 +64,6 @@ b {
 
 .header-nav-linklist {
   display: flex;
-
   align-items: center;
 }
 
@@ -322,7 +324,7 @@ b {
   margin-bottom: 94px;
 }
 
-.customers-section > .list {
+.customers-container > .list {
   display: flex;
 }
 

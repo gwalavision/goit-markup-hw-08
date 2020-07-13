@@ -18,7 +18,7 @@
     <!--site header-->
     <!--site header-->
     <header class="header">
-      <div class="header-container portfolio">
+      <div class="header-container container portfolio">
         <nav class="header-nav">
           <ul class="header-nav-linklist list">
             <li class="header-logo">
@@ -51,39 +51,44 @@
       </div>
     </header>
     <main>
-      <div class="portfolio-container">
-        <!-- hidden header -->
-        <h1 hidden>Портфолио</h1>
-        <!-- filter section -->
-        <section class="filter-section">
-          <h2 hidden>Фильтр</h2>
-          <ul class="list">
-            <li class="filter-section-item">
-              <button type="button" class="filter-section-btn">Все</button>
-            </li>
-            <li class="filter-section-item">
-              <button type="button" class="filter-section-btn">
-                Веб-сайты
-              </button>
-            </li>
-            <li class="filter-section-item">
-              <button type="button" class="filter-section-btn">
-                Приложения
-              </button>
-            </li>
-            <li class="filter-section-item">
-              <button type="button" class="filter-section-btn">Дизайн</button>
-            </li>
-            <li class="filter-section-item">
-              <button type="button" class="filter-section-btn">
-                Маркетинг
-              </button>
-            </li>
-          </ul>
-        </section>
+      <section class="portfolio-section">
+        <div class="portfolio-container container">
+          <!-- hidden header -->
+          <h1 hidden>Портфолио</h1>
+          <!-- filter section -->
+          <div class="filter-section">
+            <h2 hidden>Фильтр</h2>
+            <ul class="list">
+              <li class="filter-section-item">
+                <button type="button" class="filter-section-btn">Все</button>
+              </li>
+              <li class="filter-section-item">
+                <button type="button" class="filter-section-btn">
+                  Веб-сайты
+                </button>
+              </li>
+              <li class="filter-section-item">
+                <button type="button" class="filter-section-btn">
+                  Приложения
+                </button>
+              </li>
+              <li class="filter-section-item">
+                <button type="button" class="filter-section-btn">Дизайн</button>
+              </li>
+              <li class="filter-section-item">
+                <button type="button" class="filter-section-btn">
+                  Маркетинг
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-        <!-- projects snippets -->
-        <div class="projects-container">
+      <!-- projects snippets -->
+      <section class="projects-snippets">
+        <div class="projects-container container">
+          <h2 hidden>Проекты</h2>
           <ul class="projects-list list">
             <li class="projects-item">
               <a class="link" href="">
@@ -263,10 +268,10 @@
             </li>
           </ul>
         </div>
-      </div>
+      </section>
     </main>
     <footer class="footer">
-      <div class="footer-container">
+      <div class="footer-container container">
         <!--contacts-->
         <div class="contacts-container">
           <div class="footer-logo">
