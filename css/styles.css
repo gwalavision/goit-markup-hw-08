@@ -351,6 +351,7 @@ b {
 
 .footer-container {
   display: flex;
+  align-items: baseline;
 }
 
 .contacts-container {
@@ -390,7 +391,6 @@ b {
 }
 
 .socialize-container {
-  padding-top: 12px;
   margin-right: 94px;
 }
 
@@ -413,10 +413,6 @@ b {
 
 .footer-social-item:not(:last-child) {
   margin-right: 10px;
-}
-
-.subscribe-container {
-  padding-top: 12px;
 }
 
 .subscribe-container > .text {
