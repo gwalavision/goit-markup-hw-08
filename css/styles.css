@@ -18,6 +18,23 @@ body {
   letter-spacing: 0.03em;
 }
 
+img {
+  display: block;
+}
+
+.visuallyhidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .container {
   width: 1200px;
   margin-right: auto;
@@ -243,10 +260,6 @@ b {
   display: flex;
 }
 
-.works-item .image {
-  display: block;
-}
-
 .works-item:not(:last-child) {
   margin-right: 30px;
 }
@@ -288,7 +301,6 @@ b {
 }
 
 .worker-image {
-  display: block;
   margin-bottom: 30px;
 }
 
@@ -432,13 +444,10 @@ b {
 }
 
 /* filter buttons section  */
-.filter-section {
-  padding-bottom: 50px;
-}
-
-.filter-section > .list {
+.portfolio-container > .filter-section {
   display: flex;
   justify-content: center;
+  margin-bottom: 50px;
 }
 
 .filter-section-item:not(:last-child) {
