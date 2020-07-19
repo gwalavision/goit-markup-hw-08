@@ -347,7 +347,26 @@ b {
 
 .icon-container {
   width: 44px;
+  height: 44px;
   padding: 12px 12px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.ig-container {
+  background-image: url(../images/instagram_icon.svg);
+}
+
+.tw-container {
+  background-image: url(../images/twitter_icon.svg);
+}
+
+.fb-container {
+  background-image: url(../images/facebook_icon.svg);
+}
+
+.li-container {
+  background-image: url(../images/linkedin_icon.svg);
 }
 
 .worker-social .icons:not(:last-child) {
