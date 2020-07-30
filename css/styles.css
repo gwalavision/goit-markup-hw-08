@@ -484,7 +484,9 @@ b {
 }
 
 .customers-item .link:hover .company-icon,
-.customers-item .link:focus .company-icon {
+.customers-item .link:focus .company-icon,
+.customers-item:hover .company-icon,
+.customers-item:focus .company-icon {
   fill: var(--accent-color);
 }
 
