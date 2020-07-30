@@ -118,6 +118,7 @@ b {
   padding: 32px 0px;
 
   color: inherit;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-linklist-item:not(:last-child) {
@@ -138,6 +139,8 @@ b {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .getintouch-header > a {
@@ -153,6 +156,7 @@ b {
   fill: var(--secondary-text-color);
   margin-right: 10px;
   vertical-align: baseline;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link.mail:hover .envelope-icon,
@@ -291,7 +295,8 @@ b {
   justify-content: center;
   position: absolute;
   bottom: 0;
-  top: 224px;
+  padding-top: 27px;
+  padding-bottom: 27px;
   width: 100%;
 
   font-weight: 700;
@@ -300,13 +305,6 @@ b {
   text-transform: uppercase;
   color: var(--main-white-color);
   background-color: rgba(47, 48, 58, 0.8);
-
-  transform: translatey(100%);
-  transition: transform 250ms ease;
-}
-
-.works-item:hover .specialty-header {
-  transform: translatey(0);
 }
 
 .works-section {
@@ -392,10 +390,6 @@ b {
   padding: 0px 32px 24px 32px;
 }
 
-.icon-container .link {
-  padding: 12px 12px;
-}
-
 .icon-container {
   display: flex;
   justify-content: center;
@@ -406,17 +400,28 @@ b {
   overflow: hidden;
 }
 
+.icon-container .link {
+  padding: 12px 12px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-container .link:hover,
+.icon-container .link:focus {
+  background-color: var(--accent-color);
+}
+
 .worker-social-link .icon {
   display: block;
   fill: var(--icons-main-color);
 }
 
-.icon-container:hover,
-.icon-container .link:focus {
-  background-color: var(--accent-color);
+.link .icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.icon-container:hover .icon,
+.icon-container .link:hover .icon,
 .icon-container .link:focus .icon {
   fill: white;
 }
@@ -452,6 +457,8 @@ b {
 
   border: 1px solid var(--icons-main-color);
   border-radius: 4px;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-item:last-child {
@@ -467,6 +474,8 @@ b {
 
 .company-icon {
   fill: var(--icons-main-color);
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-item:hover,
@@ -508,6 +517,8 @@ b {
 
 .getintouch-address .link {
   margin-bottom: 9px;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .getintouch-address > .address {
@@ -551,11 +562,6 @@ b {
 
 .footer-social-item .footer-icon {
   background-color: rgba(255, 255, 255, 0.1);
-}
-
-.footer-icon .link:hover,
-.footer-icon .link:focus {
-  background-color: var(--accent-color);
 }
 
 .footer-icon .icon {
@@ -608,6 +614,8 @@ b {
   border-radius: 4px;
 
   cursor: pointer;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter-section-btn:hover,
@@ -643,7 +651,11 @@ b {
   overflow: hidden;
 }
 
-.projects-item:hover,
+.projects-item .link {
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.projects-item .link:hover,
 .projects-item .link:focus {
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
     0px 1px 1px rgba(0, 0, 0, 0.12);
@@ -671,20 +683,43 @@ b {
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--primary-text-color);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .projects-type {
   font-size: 16px;
   line-height: 1.87;
   color: #757575;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.projects-overlay {
+  position: relative;
+
+  overflow: hidden;
 }
 
 .projects-description {
-  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 63px 24px;
+
   font-size: 18px;
   line-height: 1.56;
   color: var(--main-white-color);
   background-color: var(--accent-color);
+
+  opacity: 0.9;
+
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.projects-item .link:hover .projects-description {
+  transform: translateY(0);
 }
 
 .projects-header:hover,
