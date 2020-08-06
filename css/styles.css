@@ -11,7 +11,7 @@
 
 /* general properties */
 body {
-  background-color: var(--main-wthie-color);
+  background-color: var(--main-white-color);
   color: var(--primary-text-color);
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
@@ -583,12 +583,94 @@ b {
 
 .subscribe-container > .text {
   display: block;
+  margin-bottom: 20px;
 
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
   color: var(--main-white-color);
+}
+
+.subscribe-form {
+  display: flex;
+}
+
+.subscribe-container-form {
+  position: relative;
+}
+
+.subscribe-field {
+  width: 358px;
+  padding: 15px;
+  margin-right: 12px;
+
+  color: var(--main-white-color);
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+
+  outline: none;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subscribe-field:focus {
+  border-color: var(--accent-color);
+}
+
+.subscribe-ph {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: var(--secondary-text-color);
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subscribe-field:focus + .subscribe-ph,
+.subscribe-field:not(:placeholder-shown) + .subscribe-ph {
+  transform: translate(-165%, -50%);
+  color: var(--main-white-color);
+}
+
+.subscribe-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 200px;
+  padding: 10px 29px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: var(--main-white-color);
+
+  background-color: var(--accent-color);
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subscribe-button:hover,
+.subscribe-button:focus {
+  background-color: #188ce8;
+}
+
+.subscribe-claim {
+  margin-right: 10px;
+}
+
+.subscribe-icon {
+  display: block;
+  fill: var(--main-white-color);
 }
 
 /* PORTFOLIO PAGE  */
