@@ -693,11 +693,22 @@ b {
   min-height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
 
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.order-popup.is-hidden {
   visibility: hidden;
   opacity: 0;
+  pointer-events: none;
+}
+
+.order-popup.modal-window {
+  /* opacity: 1; */
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .order-popup-window {
+  position: relative;
   max-width: 528px;
   display: flex;
   flex-direction: column;
@@ -758,7 +769,6 @@ b {
 }
 
 .popup-label {
-  transform-origin: top left;
   position: absolute;
   top: 50%;
   left: 42px;
@@ -771,7 +781,9 @@ b {
 }
 
 .popup-input:focus + .popup-label,
-.popup-input:not(:placeholder-shown) + .popup-label {
+.popup-input:not(:placeholder-shown) + .popup-label,
+.popup-textarea:focus + .popup-label-commentary,
+.popup-textarea:not(:placeholder-shown) + .popup-label-commentary {
   font-size: 12px;
   color: var(--accent-color);
 }
@@ -791,9 +803,35 @@ b {
   transform: translate(-80%, -300%);
 }
 
+.popup-textarea:focus + .popup-label-commentary,
+.popup-textarea:not(:placeholder-shown) + .popup-label-commentary {
+  transform: translateY(-240%);
+}
+
 .popup-commentary {
-  padding-left: 16px;
+  position: relative;
   margin-bottom: 20px;
+}
+
+.popup-label-commentary {
+  position: absolute;
+  top: 12px;
+  left: 16px;
+
+  pointer-events: none;
+
+  transition: font-size 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.popup-textarea {
+  width: 100%;
+  padding: 12px 16px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   resize: none;
 }
@@ -824,18 +862,50 @@ b {
   overflow: hidden;
 }
 
-.checkmark-icon {
-  display: block;
-}
-
 .checkbox:checked + .custom-checkbox {
   background-color: var(--accent-color);
   fill: var(--main-white-color);
   border-color: var(--accent-color);
 }
 
+.legal-agreement {
+  color: var(--accent-color);
+}
+
 .order-button-container {
   text-align: center;
+}
+
+.closing-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  background-color: var(--main-white-color);
+  cursor: pointer;
+  outline: none;
+}
+
+.closingmark-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.closing-button:hover {
+  border-color: var(--accent-color);
+}
+
+.closing-button:hover .closingmark-icon {
+  fill: var(--accent-color);
 }
 
 /* PORTFOLIO PAGE  */

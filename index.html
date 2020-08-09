@@ -63,9 +63,9 @@
             Эффективные решения <br />
             для вашего бизнеса
           </h1>
-          <a href="#popup">
-            <button class="btn" type="button">Заказать услугу</button>
-          </a>
+          <button class="btn" type="button" data-modal-open>
+            Заказать услугу
+          </button>
         </div>
       </section>
       <!--our advantages-->
@@ -556,17 +556,17 @@
         <!-- subscribe -->
         <div class="subscribe-container">
           <b class="text">Подпишитесь на рассылку</b>
-          <form class="subscribe-form" action="">
+          <form class="subscribe-form">
             <div class="subscribe-container-form">
               <input
                 class="subscribe-field"
                 type="email"
                 name="email-form"
-                id="email-form"
+                id="subscribe-email"
                 placeholder=" "
                 required
               />
-              <label class="subscribe-ph" for="email-form">E-mail</label>
+              <label class="subscribe-ph" for="subscribe-email">E-mail</label>
             </div>
             <button class="subscribe-button" type="submit">
               <span class="subscribe-claim">Подписаться</span>
@@ -578,59 +578,90 @@
         </div>
       </div>
     </footer>
-    <div class="order-popup">
-        <form class="order-popup-window" action="">
-          <b class="popup-call">Оставьте свои данные, мы вам перезвоним</b>
-          <div class="popup-name popup-line">
-            <input class="popup-input" type="name" placeholder=" " required />
-            <label class="popup-label name" for="name">Имя</label>
-            <svg class="popup-icon" width="12" height="12">
-              <use href="./images/icons.svg#person_form"></use>
-            </svg>
-          </div>
-          <div class="popup-tel popup-line">
-            <input class="popup-input" type="tel" placeholder=" " required />
-            <label class="popup-label tel" for="tel">Телефон</label>
-            <svg class="popup-icon" width="12" height="12">
-              <use href="./images/icons.svg#tel_form"></use>
-            </svg>
-          </div>
-          <div class="pop-up-email popup-line">
-            <input class="popup-input" type="email" placeholder=" " required />
-            <label class="popup-label email" for="email">Почта</label>
-            <svg class="popup-icon" width="12" height="12">
-              <use href="./images/icons.svg#envelope_form"></use>
-            </svg>
-          </div>
+    <div class="order-popup is-hidden modal-window" data-modal>
+      <form class="order-popup-window">
+        <b class="popup-call">Оставьте свои данные, мы вам перезвоним</b>
+        <div class="popup-name popup-line">
+          <input
+            class="popup-input"
+            type="text"
+            name="name"
+            id="popup-name"
+            placeholder=" "
+            required
+          />
+          <label class="popup-label name" for="popup-name">Имя</label>
+          <svg class="popup-icon" width="12" height="12">
+            <use href="./images/icons.svg#person_form"></use>
+          </svg>
+        </div>
+        <div class="popup-tel popup-line">
+          <input
+            class="popup-input"
+            type="tel"
+            name="telephone"
+            id="telephone"
+            placeholder=" "
+            required
+          />
+          <label class="popup-label tel" for="telephone">Телефон</label>
+          <svg class="popup-icon" width="12" height="12">
+            <use href="./images/icons.svg#tel_form"></use>
+          </svg>
+        </div>
+        <div class="popup-email popup-line">
+          <input
+            class="popup-input"
+            type="email"
+            name="email"
+            id="popup-email"
+            placeholder=" "
+            required
+          />
+          <label class="popup-label email" for="popup-email">Почта</label>
+          <svg class="popup-icon" width="12" height="12">
+            <use href="./images/icons.svg#envelope_form"></use>
+          </svg>
+        </div>
+        <div class="popup-commentary popup-line">
           <textarea
-            class="popup-commentary popup-input"
+            class="popup-textarea"
             name="commentary"
-            id="commentary"
             cols="30"
             rows="10"
-            placeholder="Комментарий"
+            placeholder=" "
           ></textarea>
-            <label class="popup-agreement">
-                <input
-                class="checkbox visuallyhidden"
-                type="checkbox"
-                name="order-checkbox"
-              />
-              <span class="custom-checkbox">
-                <svg class="checkmark-icon" width="14" height="10" >
+          <label for="" class="popup-label-commentary">Комментарий</label>
+        </div>
+        <label class="popup-agreement">
+          <input
+            class="checkbox visuallyhidden"
+            type="checkbox"
+            name="order-checkbox"
+            required
+          />
+          <span class="custom-checkbox">
+            <svg class="checkmark-icon" width="14" height="10">
               <use href="./images/icons.svg#checkmark"></use>
             </svg>
-              </span>
-              <span class="popup-agreement-text">Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a></span>
-            </label>
-          <div class="order-button-container">
-            <button class="order-send-button btn" type="submit">
-              Отправить
-            </button>
-          </div>
-        </form>
-      </div>
+          </span>
+          <span class="popup-agreement-text"
+            >Соглашаюсь с рассылкой и принимаю
+            <a class="legal-agreement" href="">Условия договора</a></span
+          >
+        </label>
+        <div class="order-button-container">
+          <button class="order-send-button btn" type="submit">
+            Отправить
+          </button>
+        </div>
+        <button class="closing-button" type="button" data-modal-close>
+          <svg class="closingmark-icon" width="11" height="11">
+            <use href="./images/icons.svg#closingmark"></use>
+          </svg>
+        </button>
+      </form>
     </div>
-     <script src="./js/modal.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
