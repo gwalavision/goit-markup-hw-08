@@ -1,2 +1,2 @@
-# goit-markup-hw-05
-https://gwalavision.github.io/goit-markup-hw-05/
+# goit-markup-hw-06
+https://gwalavision.github.io/goit-markup-hw-06/
