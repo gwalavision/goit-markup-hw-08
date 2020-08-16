@@ -2,49 +2,49 @@
   padding-top: 64px;
   padding-bottom: 60px;
   background-color: $footer-background-color;
-}
 
-.footer-container {
-  display: flex;
-  align-items: baseline;
-}
+  .container {
+    @extend %alignCenter;
+    align-items: baseline;
+  }
 
-.contacts-container {
-  margin-right: 64px;
+  .contacts-container {
+    margin-right: 64px;
+  }
+
+  .socialize-container {
+    margin-right: 94px;
+  }
 }
 
 .getintouch-address {
   font-size: 14px;
   line-height: 1.71;
   color: $light-grey-color;
-}
 
-.getintouch-address .link {
-  margin-bottom: 9px;
+  .link {
+    margin-bottom: 9px;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+    @include transition(color);
+  }
 
-.getintouch-address > .address {
-  color: $main-white-color;
-}
+  & .link:hover,
+  & .link:focus {
+    color: $accent-color;
+  }
 
-.getintouch-address > .footer-mail {
-  color: inherit;
-}
+  .address {
+    color: $main-white-color;
+  }
 
-.getintouch-address > .footer-phone {
-  margin-bottom: 0;
-  color: inherit;
-}
+  .footer-mail {
+    color: inherit;
+  }
 
-.getintouch-address .link:hover,
-.getintouch-address .link:focus {
-  color: $accent-color;
-}
-
-.socialize-container {
-  margin-right: 94px;
+  .footer-phone {
+    margin-bottom: 0;
+    color: inherit;
+  }
 }
 
 .socialize-text {

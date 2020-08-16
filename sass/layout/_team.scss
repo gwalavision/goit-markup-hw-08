@@ -3,6 +3,10 @@
   padding-bottom: 94px;
 
   background-color: $secondary-background-color;
+
+  .list {
+    @extend %alignCenter;
+  }
 }
 
 .team-header {
@@ -14,20 +18,18 @@
   text-align: center;
 }
 
-.team-section .list {
-  display: flex;
-  justify-content: center;
-}
-
 .worker {
-  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 1px 3px rgba(0, 0, 0, 0.12);
+  @extend %cardBorderShadow;
   border-radius: 0px 0px 4px 4px;
   background-color: $main-white-color;
-}
 
-.worker:not(:last-child) {
-  margin-right: 30px;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  .list.worker-social {
+    padding: 0px 32px 24px 32px;
+  }
 }
 
 .worker-header {
@@ -50,8 +52,4 @@
   line-height: 1.19;
   text-align: center;
   color: $secondary-text-color;
-}
-
-.list.worker-social {
-  padding: 0px 32px 24px 32px;
 }

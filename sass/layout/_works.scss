@@ -2,12 +2,14 @@
   position: relative;
 
   overflow: hidden;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .specialty-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @extend %alignCenter;
   position: absolute;
   bottom: 0;
   padding-top: 27px;
@@ -37,8 +39,4 @@
 
 .works-container .list {
   display: flex;
-}
-
-.works-item:not(:last-child) {
-  margin-right: 30px;
 }

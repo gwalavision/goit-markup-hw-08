@@ -1,6 +1,8 @@
-@import './utils/variables';
 @import './base/normalize';
 @import './base/basic_settings';
+@import './utils/variables';
+@import './utils/mixins';
+@import './utils/placeholders';
 @import './components/logo';
 @import './components/buttons';
 @import './components/company-icons';
@@ -9,6 +11,7 @@
 @import './components/icons';
 @import './components/modal';
 @import './components/subscribe-footer-form';
+@import './components/active-page-underline.scss';
 @import './layout/header';
 @import './layout/hero';
 @import './layout/advantages';
@@ -16,3 +19,4 @@
 @import './layout/team';
 @import './layout/customers';
 @import './layout/footer';
+@import './layout/portfolio';

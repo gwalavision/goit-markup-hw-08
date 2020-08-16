@@ -20,16 +20,21 @@
   border: 1px solid $icons-main-color;
   border-radius: 4px;
 
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+  @include transition(border-color);
 
-.customers-item:last-child {
-  margin-right: 0px;
-}
+  &:hover,
+  &:focus {
+    border-color: $accent-color;
+  }
 
-.customers-item .link {
-  @extend %alignCenter;
-  width: 100%;
+  &:last-child {
+    margin-right: 0px;
+  }
+
+  .link {
+    @extend %alignCenter;
+    width: 100%;
+  }
 }
 
 .customers-container .list {

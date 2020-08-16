@@ -1,0 +1,39 @@
+%alignCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%buttons {
+  min-width: 200px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: $main-white-color;
+  background-color: $accent-color;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+%cardBorderShadow {
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    0px 1px 1px rgba(0, 0, 0, 0.12);
+}
+
+%pageCentering {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+%subscribeField {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}

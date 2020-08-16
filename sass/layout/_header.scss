@@ -3,46 +3,59 @@
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+
+  &-nav-linklist,
+  &-container {
+    @extend %alignCenter;
+  }
 }
 
-.header-nav-linklist {
-  @extend %alignCenter;
-}
+.nav-linklist-item {
+  &:not(:last-child) {
+    margin-right: 40px;
+  }
 
-.header-container {
-  @extend %alignCenter;
-}
+  .link {
+    padding: 32px 0px;
 
-.nav-linklist-item .link {
-  padding: 32px 0px;
+    color: inherit;
+    @include transition(color);
 
-  color: inherit;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
 
-.nav-linklist-item:not(:last-child) {
-  margin-right: 40px;
+  .current {
+    padding-bottom: 0;
+    color: $accent-color;
+  }
 }
 
 .getintouch-header {
   @extend %alignCenter;
   margin-left: auto;
-}
 
-.getintouch-header .link {
-  padding: 32px 0px;
+  .link {
+    padding: 32px 0px;
 
-  color: $secondary-text-color;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
+    color: $secondary-text-color;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+    @include transition(color);
 
-.getintouch-header > a {
-  @extend %alignCenter;
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+  a {
+    @extend %alignCenter;
+  }
 }
 
 .link.phone {
@@ -53,36 +66,12 @@
   fill: $secondary-text-color;
   margin-right: 10px;
   vertical-align: baseline;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+  @include transition(fill);
 
-.link.mail:hover .envelope-icon,
-.link.mail:focus .envelope-icon,
-.link.phone:hover .phone-icon,
-.link.phone:focus .phone-icon {
-  fill: $accent-color;
-}
-
-.nav-linklist-item .link:hover,
-.nav-linklist-item .link:focus,
-.getintouch-header .link:hover,
-.getintouch-header .link:focus {
-  color: $accent-color;
-}
-
-.nav-linklist-item .current {
-  padding-bottom: 0;
-  color: $accent-color;
-}
-
-.current::after {
-  content: '';
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-  width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  margin-top: 28px;
-  background-color: $accent-color;
+  .link.mail:hover &,
+  .link.mail:focus &,
+  .link.phone:hover &,
+  .link.phone:focus & {
+    fill: $accent-color;
+  }
 }

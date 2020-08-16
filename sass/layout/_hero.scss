@@ -3,8 +3,7 @@
   padding-bottom: 200px;
   text-align: center;
   max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
+  @extend %pageCentering;
 
   background-image: linear-gradient($blackout, $blackout),
     url(../images/header_img.jpg);
