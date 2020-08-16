@@ -1,0 +1,50 @@
+body {
+  background-color: $main-white-color;
+  color: $primary-text-color;
+  font-family: $main-font;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+}
+
+img {
+  display: block;
+}
+
+.link {
+  text-decoration: none;
+  font-style: normal;
+  display: block;
+}
+
+.list {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+ul,
+p,
+button,
+address,
+b {
+  margin: 0;
+  padding: 0;
+}
+
+.visuallyhidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

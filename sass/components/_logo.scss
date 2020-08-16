@@ -1,0 +1,29 @@
+/* logo (header & footer) */
+.logo {
+  display: block;
+
+  font-family: $logo-font;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+}
+
+.header-logo {
+  margin-right: 64px;
+}
+
+.web-word {
+  color: $accent-color;
+}
+
+.studio-word-header {
+  color: $black-color;
+}
+
+.studio-word-footer {
+  color: $main-white-color;
+}
+
+.footer-logo {
+  margin-bottom: 20px;
+}

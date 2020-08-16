@@ -1,0 +1,61 @@
+.subscribe-container > .text {
+  display: block;
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: $main-white-color;
+}
+
+.subscribe-form {
+  display: flex;
+}
+
+.subscribe-container-form {
+  position: relative;
+}
+
+.subscribe-field {
+  width: 358px;
+  padding: 15px;
+  margin-right: 12px;
+
+  color: $main-white-color;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+
+  outline: none;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subscribe-field:focus {
+  border-color: $accent-color;
+}
+
+.subscribe-ph {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: $secondary-text-color;
+
+  pointer-events: none;
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subscribe-field:focus + .subscribe-ph,
+.subscribe-field:not(:placeholder-shown) + .subscribe-ph {
+  transform: translate(-165%, -50%);
+  color: $main-white-color;
+}
+
+.subscribe-claim {
+  margin-right: 10px;
+}

@@ -1,0 +1,65 @@
+.footer {
+  padding-top: 64px;
+  padding-bottom: 60px;
+  background-color: $footer-background-color;
+}
+
+.footer-container {
+  display: flex;
+  align-items: baseline;
+}
+
+.contacts-container {
+  margin-right: 64px;
+}
+
+.getintouch-address {
+  font-size: 14px;
+  line-height: 1.71;
+  color: $light-grey-color;
+}
+
+.getintouch-address .link {
+  margin-bottom: 9px;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.getintouch-address > .address {
+  color: $main-white-color;
+}
+
+.getintouch-address > .footer-mail {
+  color: inherit;
+}
+
+.getintouch-address > .footer-phone {
+  margin-bottom: 0;
+  color: inherit;
+}
+
+.getintouch-address .link:hover,
+.getintouch-address .link:focus {
+  color: $accent-color;
+}
+
+.socialize-container {
+  margin-right: 94px;
+}
+
+.socialize-text {
+  display: inline-block;
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $main-white-color;
+}
+
+.socialize-container > .list {
+  display: flex;
+  color: $secondary-text-color;
+}

@@ -1,0 +1,86 @@
+.btn {
+  min-width: 200px;
+  padding: 10px 32px;
+
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: $main-white-color;
+  background: $accent-color;
+  cursor: pointer;
+  text-decoration: none;
+
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  outline: none;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn:hover {
+  background-color: $button-hover-color;
+}
+
+.subscribe-button {
+  @extend %alignCenter;
+  min-width: 200px;
+  padding: 10px 29px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: $main-white-color;
+
+  background-color: $accent-color;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subscribe-button:hover,
+.subscribe-button:focus {
+  background-color: $button-hover-color;
+}
+
+.order-send-button {
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+}
+
+.closing-button {
+  @extend %alignCenter;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+
+  border: 1px solid $footer-icons-main-color;
+  border-radius: 50%;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  background-color: $main-white-color;
+  cursor: pointer;
+  outline: none;
+}
+
+.closingmark-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.closing-button:hover {
+  border-color: $accent-color;
+}
+
+.closing-button:hover .closingmark-icon {
+  fill: $accent-color;
+}

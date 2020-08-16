@@ -1,0 +1,202 @@
+.order-popup {
+  @extend %alignCenter;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.order-popup-window {
+  position: relative;
+  max-width: 528px;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+
+  background-color: $main-white-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.popup-call {
+  margin-bottom: 30px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+.popup-line {
+  position: relative;
+  margin-bottom: 28px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  color: $secondary-text-color;
+}
+
+.popup-icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.popup-input {
+  display: block;
+  width: 100%;
+  padding: 12px 42px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.popup-input:focus ~ .popup-icon,
+.popup-input:not(:placeholder-shown) ~ .popup-icon {
+  fill: $accent-color;
+}
+
+.popup-input:focus,
+.popup-input:not(:placeholder-shown) {
+  border-color: $accent-color;
+}
+
+.popup-textarea {
+  width: 100%;
+  height: 120px;
+}
+
+.popup-label {
+  position: absolute;
+  top: 50%;
+  left: 42px;
+  transform: translateY(-50%);
+
+  pointer-events: none;
+
+  transition: font-size 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.popup-input:focus + .popup-label,
+.popup-input:not(:placeholder-shown) + .popup-label,
+.popup-textarea:focus + .popup-label-commentary,
+.popup-textarea:not(:placeholder-shown) + .popup-label-commentary {
+  font-size: 12px;
+  color: $accent-color;
+}
+
+.popup-input:focus + .popup-label.name,
+.popup-input:not(:placeholder-shown) + .popup-label.name {
+  transform: translate(-114%, -300%);
+}
+
+.popup-input:focus + .popup-label.tel,
+.popup-input:not(:placeholder-shown) + .popup-label.tel {
+  transform: translate(-55%, -300%);
+}
+
+.popup-input:focus + .popup-label.email,
+.popup-input:not(:placeholder-shown) + .popup-label.email {
+  transform: translate(-80%, -300%);
+}
+
+.popup-textarea:focus + .popup-label-commentary,
+.popup-textarea:not(:placeholder-shown) + .popup-label-commentary {
+  transform: translateY(-240%);
+}
+
+.popup-commentary {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  margin-bottom: 20px;
+
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  color: $secondary-text-color;
+}
+
+.popup-label-commentary {
+  position: absolute;
+  top: 12px;
+  left: 16px;
+
+  pointer-events: none;
+
+  transition: font-size 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.popup-textarea {
+  width: 100%;
+  padding: 12px 16px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  resize: none;
+}
+
+.popup-agreement {
+  position: relative;
+  margin-left: 13px;
+  padding-left: 24px;
+  margin-bottom: 30px;
+
+  font-size: 14px;
+  line-height: 1.71;
+  color: $secondary-text-color;
+}
+
+.popup-agreement-text::after {
+  position: absolute;
+  top: 3px;
+  left: 0;
+
+  content: '';
+  display: block;
+  width: 16px;
+  height: 15px;
+  padding: 4px 2px 3px 3px;
+
+  background-origin: border-box;
+  background-image: url('../images/checkmark.svg');
+  background-size: 13px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid #212121;
+  border-radius: 2px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox:checked + .popup-agreement-text::after {
+  background-color: $accent-color;
+  border-color: $accent-color;
+}
+
+.legal-agreement {
+  color: $accent-color;
+}

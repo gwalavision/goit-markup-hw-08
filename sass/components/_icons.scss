@@ -1,0 +1,35 @@
+.worker-social-link .icon {
+  display: block;
+  fill: $icons-main-color;
+}
+
+.link .icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-container .link:hover .icon,
+.icon-container .link:focus .icon {
+  fill: $main-white-color;
+}
+
+.worker-social .icons:not(:last-child) {
+  margin-right: 10px;
+}
+
+.footer-social-item .footer-icon {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-icon .icon {
+  display: block;
+  fill: $main-white-color;
+}
+
+.footer-social-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.subscribe-icon {
+  display: block;
+  fill: $main-white-color;
+}
