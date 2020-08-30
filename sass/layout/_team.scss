@@ -1,34 +1,87 @@
 .team-section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-
+  display: block;
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: $secondary-background-color;
+}
 
-  .list {
-    @extend %alignCenter;
+@media screen and (min-width: $tablet) {
+  .team-section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
+  .team-container .list {
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 
 .team-header {
-  margin-bottom: 50px;
-
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
+  font-size: 28px;
+  line-height: 1.18;
+  letter-spacing: 0.03em;
+
   text-align: center;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: $desktop) {
+  .team-header {
+    margin-bottom: 50px;
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+  }
+}
+
+.team-container {
+  display: block;
 }
 
 .worker {
   @extend %cardBorderShadow;
   border-radius: 0px 0px 4px 4px;
   background-color: $main-white-color;
-
-  &:not(:last-child) {
-    margin-right: 30px;
-  }
+  max-width: 450px;
+  margin-right: 30px;
 
   .list.worker-social {
+    @extend %alignCenter;
     padding: 0px 32px 24px 32px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .worker:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: $tablet) and (max-width: 1199px) {
+  .worker {
+    width: 354px;
+  }
+
+  .worker:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  .worker:nth-last-child(-n + 2) {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .worker {
+    width: 270px;
+    margin-bottom: 0;
+  }
+  .worker:last-child {
+    margin-right: 0px;
   }
 }
 

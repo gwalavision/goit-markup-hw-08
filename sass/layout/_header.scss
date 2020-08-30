@@ -1,23 +1,53 @@
 .header {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  position: relative;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  max-width: $mobile;
+  margin: 0 auto;
 
-  &-nav-linklist,
   &-container {
-    @extend %alignCenter;
+    display: flex;
+    width: 100%;
+  }
+}
+
+.header-nav {
+  @extend %alignCenter;
+}
+
+@media screen and (min-width: $tablet) {
+  .header {
+    padding-top: 21px;
+    padding-bottom: 21px;
+    max-width: $tablet;
+  }
+
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: $desktop) {
+  .header {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    max-width: $desktop;
   }
 }
 
 .nav-linklist-item {
+  display: none;
   &:not(:last-child) {
     margin-right: 40px;
   }
 
   .link {
-    padding: 32px 0px;
-
+    display: block;
     color: inherit;
     @include transition(color);
 
@@ -33,13 +63,22 @@
   }
 }
 
+@media screen and (min-width: $tablet) {
+  .nav-linklist-item {
+    display: block;
+  }
+}
+
+.header-nav-linklist {
+  display: flex;
+  align-items: center;
+}
+
 .getintouch-header {
-  @extend %alignCenter;
+  display: none;
   margin-left: auto;
 
   .link {
-    padding: 32px 0px;
-
     color: $secondary-text-color;
     font-weight: 500;
     font-size: 14px;
@@ -53,13 +92,38 @@
       color: $accent-color;
     }
   }
-  a {
-    @extend %alignCenter;
+}
+
+@media screen and (min-width: $tablet) and (max-width: 1199px) {
+  .getintouch-header .link:not(:last-child) {
+    margin-bottom: 10px;
   }
 }
 
-.link.phone {
-  margin-left: 32px;
+@media screen and (min-width: $desktop) {
+  .getintouch-header a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .getintouch-header {
+    display: block;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .getintouch-header {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .link.phone {
+    margin-left: 32px;
+  }
 }
 
 .address-icon {

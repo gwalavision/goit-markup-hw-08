@@ -1,5 +1,6 @@
 @import './base/normalize';
 @import './base/basic_settings';
+@import './utils/breakpoints';
 @import './utils/variables';
 @import './utils/mixins';
 @import './utils/placeholders';
@@ -11,7 +12,7 @@
 @import './components/icons';
 @import './components/modal';
 @import './components/subscribe-footer-form';
-@import './components/active-page-underline.scss';
+@import './components/active-page-underline';
 @import './layout/header';
 @import './layout/hero';
 @import './layout/advantages';

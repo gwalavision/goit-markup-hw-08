@@ -1,3 +1,8 @@
+.subscribe-container {
+  @extend %alignCenter;
+  flex-direction: column;
+}
+
 .subscribe-container > .text {
   display: block;
   margin-bottom: 20px;
@@ -11,16 +16,32 @@
 
 .subscribe-form {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (mix-width: $desktop) {
+  .subscribe-form {
+    flex-direction: row;
+  }
 }
 
 .subscribe-container-form {
   position: relative;
+  margin-bottom: 20px;
+  display: block;
+}
+
+@media screen and (mix-width: $desktop) {
+  .subscribe-container-form {
+    margin-bottom: 0;
+  }
 }
 
 .subscribe-field {
-  width: 358px;
+  display: block;
+  width: 480px;
   padding: 15px;
-  margin-right: 12px;
 
   color: $main-white-color;
   background-color: transparent;
@@ -32,6 +53,12 @@
 
   &:focus {
     border-color: $accent-color;
+  }
+}
+
+@media screen and (mix-width: $desktop) {
+  .subscribe-field {
+    margin-right: 12px;
   }
 }
 

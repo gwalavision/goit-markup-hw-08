@@ -1,6 +1,29 @@
 .container {
-  width: 1200px;
+  display: block;
   @extend %pageCentering;
   padding-right: 15px;
   padding-left: 15px;
+}
+
+@media screen and (min-width: $mobile) {
+  .container {
+    width: 480px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .container {
+    width: 768px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }

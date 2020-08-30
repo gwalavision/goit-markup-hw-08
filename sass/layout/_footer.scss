@@ -1,23 +1,68 @@
 .footer {
-  padding-top: 64px;
+  display: block;
+  padding-top: 60px;
   padding-bottom: 60px;
   background-color: $footer-background-color;
 
-  .container {
+  .socialize-container {
     @extend %alignCenter;
-    align-items: baseline;
+    flex-direction: column;
+    margin-bottom: 60px;
   }
 
   .contacts-container {
-    margin-right: 64px;
+    margin-bottom: 60px;
   }
+}
 
+@media screen and (mix-width: $desktop) {
+  .footer {
+    margin-bottom: 64px;
+  }
+}
+
+@media screen and (min-width: $desktop) {
   .socialize-container {
     margin-right: 94px;
   }
 }
 
+@media screen and (min-width: $desktop) {
+  .contacts-container {
+    margin-right: 94px;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .footer {
+    padding-bottom: 64px;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .footer .container {
+    align-items: baseline;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+
+  .contacts-container {
+    padding-left: 61px;
+  }
+
+  .socialize-container {
+    padding-right: 74px;
+  }
+
+  .subscribe-container {
+    padding-left: 151px;
+  }
+}
+
 .getintouch-address {
+  text-align: center;
   font-size: 14px;
   line-height: 1.71;
   color: $light-grey-color;
@@ -45,6 +90,11 @@
     margin-bottom: 0;
     color: inherit;
   }
+}
+
+.socialize-container {
+  @extend %alignCenter;
+  flex-direction: column;
 }
 
 .socialize-text {

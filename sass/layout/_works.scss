@@ -1,3 +1,14 @@
+.works-section {
+  display: none;
+  padding-bottom: 94px;
+}
+
+@media screen and (min-width: $desktop) {
+  .works-section {
+    display: block;
+  }
+}
+
 .works-item {
   position: relative;
 
@@ -22,10 +33,6 @@
   text-transform: uppercase;
   color: $main-white-color;
   background-color: $blackout;
-}
-
-.works-section {
-  padding-bottom: 94px;
 }
 
 .works-header {
